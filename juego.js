@@ -4,6 +4,7 @@ let numeroPkm = 0;
 const randomPokemon = () => {
     document.getElementById("ganador").style.display = "none";
     document.getElementById("erroneo").style.display = "none";
+    document.getElementById("revelar").style.display = "none";
     let pokeName = getRandom();
     const url = `https://pokeapi.co/api/v2/pokemon/${pokeName}`;
     fetch(url).then((res) => {
@@ -41,6 +42,7 @@ const pokeImage = (data) => {
 
 const revisaRespuesta = () =>{
     let respuesta = document.getElementById("pokeName").value;
+    document.getElementById("revelar").style.display = "none";
     if ( respuesta == ""){
         document.getElementById("msgIn").style.display = "block";
         return;
@@ -56,6 +58,13 @@ const revisaRespuesta = () =>{
         document.getElementById("erroneo").style.display = "block";
         document.getElementById("pokeImg").style.filter = "brightness(0.0)";
     }
+}
+
+const revelarRespuesta = () =>{
+    document.getElementById("pokeImg").style.filter = "none"; 
+    document.getElementById("erroneo").style.display = "none";
+    document.getElementById("revelar").style.display = "block";    
+    document.getElementById("lbRevela").innerText = nombrePkm.toUpperCase() + " (" + numeroPkm + ")";
 }
 
 randomPokemon();
