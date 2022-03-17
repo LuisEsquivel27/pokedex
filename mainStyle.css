@@ -1,0 +1,98 @@
+nav{
+    background-color: rgb(229, 0, 24);
+}
+
+.textNav{
+    color: white !important;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+section{
+    text-align: center;
+    height: 100vh;
+    display: flex;
+}
+section>div{
+    align-self: center;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 90%;
+}
+
+section > div > div >input{
+    text-align: center;
+    width: 65%;
+    margin-top: 5%;
+}
+
+section > div > div img{
+    width: 90%;
+}
+
+.btn{
+    background-color: gray;
+    font-weight: 700;
+    margin-left: 3%;
+}
+
+.err{
+    color: red;
+    font-weight: 700;
+}
+
+article{
+    margin-top: 10%;
+}
+
+.div-movs{
+    height: 150px;
+    overflow-x: auto;
+}
+
+.txt-title{
+    font-weight: 600;
+}
+
+.txt-bold{
+    font-weight: 6500;
+}
+
+
+
+.div-border{
+    border: solid greenyellow;
+    border-radius: 10%;
+}
+
+/**Juego**/
+
+.div-btns{
+    margin-top: 5%;
+}
+.div-btns > button{
+    margin-top: 5%;
+}
+
+.div-cont{
+    display: flex;
+}
+
+.div-juego{
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100%;
+}
+
+.div-correcto{
+    margin-top: 5%;
+}
+
+.img-misterio{
+    filter: brightness(0.0);
+}
+
+.input-juego{
+    width: 65%;
+}
+

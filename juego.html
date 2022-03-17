@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><title>Pokedex LaunchX</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="./mainStyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/21cd0179da.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm  navbar-light">
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+
+            <a class="navbar-brand textNav" href="#"><img src="./assets/pokeball.png" width="10%" alt="logo pokeball">
+                Men&uacute;</a>
+        </button>
+        <!-- Brand/logo -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <img src="./assets/pokeball.png" width="10%" alt="logo pokeball">
+            <div>
+                <!-- Links -->
+                <ul class="navbar-nav centrar-vertical" data-target=".navbar-collapse.hiden">
+                    <li class="nav-item">
+                        <a class="nav-link textNav" href="./pokedex.html">Buscar Pokem&oacute;n</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link textNav" href="./juego.html">Jugar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="row" style="margin-top: auto;">
+            <div class="col-md-7 div-border">
+                <img src="./assets/pokeball.png" alt="Pokemon" id="pokeImg" class="img-misterio">
+            </div>
+            <div class="col-md-5 div-cont">
+                <div class="div-juego">
+                    <h2>¿Qui&eacute;n es ese pokem&oacute;n?</h2>
+                <input type="text" name="" id="pokeName" class="input-juego" placeholder="Ingresa nombre o n&uacute;mero de pokemon">
+                <div class="row div-btns">
+                    <div class="col-md-6">
+                        <button onclick="revisaRespuesta()" class="btn">Adivinar</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button onclick="randomPokemon()" class="btn">Nuevo Juego</button>
+                    </div>
+                </div>
+                <div style="display: none;" id="ganador" class="div-correcto">
+                    <h5>¡Felicidades has adivinado!</h5>
+                    <h5>es</h5>
+                    <h4 id="lbNombre"></h4>
+                </div>
+                
+                <p style="display: none;" id="erroneo" class="err">Lo siento, respuesta incorrecta, intenta de nuevo.</p>
+                <p class="err" id="msgIn" style="display: none;">Ingresa información!</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+<footer>
+    <script src="./juego.js"></script>
+</footer>
+</html>
